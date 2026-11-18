@@ -1,20 +1,58 @@
-# Eleva Studio — descargas
+# Eleva Studio
 
-Aquí se publican las versiones de **Eleva Studio**, el editor de fotos con IA (quitar fondo y mejorar resolución) que corre en tu propia computadora, gratis y sin subir nada a internet.
+Background removal and enlargement for photos and artwork, on your own computer. Eleva Studio is free, works offline once set up, and never uploads your images.
 
-## Descargar
+**[Download the latest version](https://github.com/machaelstudio/elevastudio-releases/releases/latest)**
 
-Entra a la última versión en [Releases](https://github.com/machaelstudio/elevastudio-releases/releases/latest):
+| Platform | Requirements | Installer |
+|---|---|---|
+| Windows | Windows 10 or 11, 64-bit | `ElevaStudio-<version>-windows-x64-setup.exe` |
+| macOS | macOS 14 or later, Apple Silicon | `ElevaStudio-<version>-macos-arm64.dmg` |
 
-- **Windows (10/11, 64 bits)**: `ElevaStudio-<versión>-windows-x64-setup.exe`. Instalador firmado; no necesita permisos de administrador.
-- **Mac (Apple Silicon, macOS 14 o más nuevo)**: `ElevaStudio-<versión>-macos-arm64.dmg`. Firmado y notarizado por Apple.
+## Features
 
-La primera vez que uses cada herramienta, el programa descarga su modelo de IA (170 MB para quitar fondo, 65 MB para mejorar; 930 MB para "máxima calidad"). Después funciona sin internet.
+- **Cutout.** Remove the background from product photos and portraits in four qualities, with a
+  fine-edges option for hair and fur.
+- **New background.** Transparent, a solid colour, your own image or the blurred original, with
+  an optional soft shadow and margin.
+- **Enlarge.** 2×, 3× or 4×, for photos or for logos and flat art, using the graphics card when
+  one is available.
+- **Batch work.** Process several images at once and save them together.
 
-El programa se actualiza solo: cuando hay una versión nueva te avisa al abrirlo.
+## Installing
 
-## Modelos
+**Windows.** Run the installer. It is signed by Machael Studio LLC and installs for the current
+user, so it needs no administrator rights.
 
-La release [`models-1`](https://github.com/machaelstudio/elevastudio-releases/releases/tag/models-1) contiene los modelos ONNX que el programa descarga: U²-Net, IS-Net y BiRefNet (quitar fondo, del proyecto [rembg](https://github.com/danielgatis/rembg)) y Real-ESRGAN x2plus / x4plus / x4plus-anime (mejorar, de [xinntao/Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN), exportados a ONNX). Todos tienen licencias abiertas que permiten el uso comercial.
+**macOS.** Open the disk image and drag Eleva Studio to the Applications folder. The app is
+signed with a Developer ID and notarized by Apple.
 
-El código fuente está en [machaelstudio/elevastudio](https://github.com/machaelstudio/elevastudio).
+The first time you use a tool, Eleva Studio downloads the component it needs: about 170 MB for
+Cutout (930 MB for the Maximum quality) and 65 MB for Enlarge. After that it works offline.
+
+## Updates
+
+Eleva Studio checks for a new version when it starts and offers to install it. Every release is
+listed on the [Releases page](https://github.com/machaelstudio/elevastudio-releases/releases)
+with its installers and SHA-256 checksums, and described in the [changelog](CHANGELOG.md).
+
+## Privacy
+
+Images are processed on your computer and are never uploaded. The app connects to the internet
+only to download components on first use and to check for updates, both from this repository.
+
+## Components
+
+The [`models-1`](https://github.com/machaelstudio/elevastudio-releases/releases/tag/models-1)
+release holds the processing components the app downloads on first use. They are ONNX builds of
+U²-Net, IS-Net and BiRefNet as distributed by [rembg](https://github.com/danielgatis/rembg), and
+of [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN). All are published under open licences
+that permit commercial use.
+
+## Support
+
+Found a problem or have a request? Open an
+[issue](https://github.com/machaelstudio/elevastudio-releases/issues) and include the version
+shown in Settings and your operating system.
+
+Published by Machael Studio LLC.
