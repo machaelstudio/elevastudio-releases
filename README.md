@@ -1,6 +1,7 @@
 # Eleva Studio
 
-Background removal and enlargement for photos and artwork, on your own computer. Eleva Studio is free, works offline once set up, and never uploads your images.
+Background removal, enlargement and print-ready export for photos and artwork, on your own
+computer. Eleva Studio is free, works offline once set up, and never uploads your images.
 
 **[Download the latest version](https://github.com/machaelstudio/elevastudio-releases/releases/latest)**
 
@@ -12,12 +13,18 @@ Background removal and enlargement for photos and artwork, on your own computer.
 ## Features
 
 - **Cutout.** Remove the background from product photos and portraits in four qualities, with a
-  fine-edges option for hair and fur.
+  fine-edges option for hair and fur. A dedicated Logo / art mode removes flat background colours
+  exactly.
 - **New background.** Transparent, a solid colour, your own image or the blurred original, with
   an optional soft shadow and margin.
 - **Enlarge.** 2×, 3× or 4×, for photos or for logos and flat art, using the graphics card when
   one is available.
+- **Restore.** Highest-quality restoration of low-quality images through a local ComfyUI
+  installation. Optional; see the [setup guide](docs/SEEDVR2.md).
+- **Export for print and DTF.** PNG, JPG and TIFF with a resolution tag, a print-width
+  resolution check, and DTF clean-up: solid edges, speck removal, edge shrink, trim and mirror.
 - **Batch work.** Process several images at once and save them together.
+- English and Spanish interface.
 
 ## Installing
 
@@ -35,6 +42,13 @@ Cutout (930 MB for the Maximum quality) and 65 MB for Enlarge. After that it wor
 Eleva Studio checks for a new version when it starts and offers to install it. Every release is
 listed on the [Releases page](https://github.com/machaelstudio/elevastudio-releases/releases)
 with its installers and SHA-256 checksums, and described in the [changelog](CHANGELOG.md).
+
+## Documentation
+
+- [User guide](docs/GUIDE.md)
+- [Guía de uso en español](docs/LEEME.md)
+- [Restore setup guide](docs/SEEDVR2.md)
+- [Changelog](CHANGELOG.md)
 
 ## Privacy
 
