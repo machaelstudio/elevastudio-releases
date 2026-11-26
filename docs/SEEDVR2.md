@@ -29,8 +29,8 @@ This is the one tool that needs a setup. Everything else in Eleva Studio works o
    - **SeedVR2 Tiling Upscaler** by *moonwhaler* (`comfyui-seedvr2-tilingupscaler`).
    Restart ComfyUI when the Manager asks.
 3. **Leave ComfyUI open.** By default it listens on `http://127.0.0.1:8188`.
-4. In Eleva Studio open **Restore**, keep the address `http://127.0.0.1:8188` and press
-   **Connect**. The status line turns green: "Connected · ComfyUI x.y".
+4. In Eleva Studio open **Restore** and press **Check again**. The steps are ticked off and
+   the panel shows "Ready · connected to ComfyUI".
 
 The models are **not** downloaded during the install: the first time you press **Restore image**
 ComfyUI downloads the chosen one (the progress is shown in ComfyUI's own window). After that it
@@ -55,9 +55,10 @@ uses 512 px tiles, 16 swapped blocks and tiled VAE.
 
 ## Problems
 
-- **"ComfyUI is not open at this address"**: start ComfyUI, wait until its window shows the
-  graph, press Connect. If you changed ComfyUI's port, type the new address.
-- **"the SeedVR2 components are not installed"**: finish step 2 and restart ComfyUI.
+- **"ComfyUI was not found on this computer"**: start ComfyUI, wait until its window has
+  loaded, press Check again. If you changed ComfyUI's port, type the new address under
+  "ComfyUI address (advanced)".
+- **"the two SeedVR2 add-ons are missing"**: finish step 2 and restart ComfyUI.
 - **Still out of memory after the retry**: pick a `Q4_K_M` GGUF model, or a smaller output size.
 - **ComfyUI shows an error about a missing model**: open ComfyUI's window; the first download
   may have been interrupted. Press Restore again to resume it.

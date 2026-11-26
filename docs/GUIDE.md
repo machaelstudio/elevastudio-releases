@@ -28,7 +28,7 @@ When a new version exists the app offers to update itself on launch.
 - **Before / after** slider, zoom, undo (Ctrl+Z), save (Ctrl+S), open (Ctrl+O).
 
 The first time you use each tool it downloads a component (internet needed only then): about
-170 MB for Cutout (930 MB for Maximum) and 65 MB for Enlarge. Settings shows how much is stored
+170 MB for Cutout (930 MB for Maximum) and 34 MB for Enlarge. Settings shows how much is stored
 and opens the folder.
 
 ## Export for print and DTF

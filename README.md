@@ -35,7 +35,7 @@ user, so it needs no administrator rights.
 signed with a Developer ID and notarized by Apple.
 
 The first time you use a tool, Eleva Studio downloads the component it needs: about 170 MB for
-Cutout (930 MB for the Maximum quality) and 65 MB for Enlarge. After that it works offline.
+Cutout (930 MB for the Maximum quality) and 34 MB for Enlarge. After that it works offline.
 
 ## Updates
 
@@ -47,7 +47,7 @@ with its installers and SHA-256 checksums, and described in the [changelog](CHAN
 
 - [User guide](docs/GUIDE.md)
 - [Guía de uso en español](docs/LEEME.md)
-- [Restore setup guide](docs/SEEDVR2.md)
+- [Restore setup guide](docs/SEEDVR2.md) · [en español](docs/SEEDVR2-ES.md)
 - [Changelog](CHANGELOG.md)
 
 ## Privacy

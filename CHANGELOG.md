@@ -4,6 +4,27 @@ All notable changes to Eleva Studio are listed here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [Semantic Versioning](https://semver.org/).
 
+## [1.1.1] - 2026-11-25
+
+### Changed
+
+- **Faster processing.** On Apple Silicon the Precise cut-out is about four times faster and
+  Enlarge about 1.7 times faster. Precise now uses the accelerated path on Mac instead of the
+  processor alone.
+- **Smaller Enlarge components.** The download is about half the size (34 MB for photos, 9 MB
+  for logos and art) with no visible change in the result. After updating, Precise and Enlarge
+  download their new components once; the old files are removed automatically.
+
+- **Restore explains its setup.** Until ComfyUI and its two add-ons are installed, the Restore
+  tab shows the setup steps in place, ticks them off as they are completed, and keeps its
+  controls greyed out under "Available after setup", with a pointer to Enlarge, which needs no
+  setup. The tool rail shows "Setup needed" or "Connected". A Spanish setup guide was added.
+
+### Fixed
+
+- **Maximum quality on Mac** took more than six minutes to start on every launch. It now starts
+  at once and takes about ten seconds per photo.
+
 ## [1.1.0] - 2026-11-18
 
 ### Added
@@ -60,5 +81,6 @@ First release as a native application for Windows and macOS.
 - Batch processing, before/after comparison, undo, and export to PNG, JPG or a ZIP of all images.
 - Signed Windows installer, signed and notarized macOS app, and automatic updates.
 
+[1.1.1]: https://github.com/machaelstudio/elevastudio-releases/releases/tag/v1.1.1
 [1.1.0]: https://github.com/machaelstudio/elevastudio-releases/releases/tag/v1.1.0
 [1.0.0]: https://github.com/machaelstudio/elevastudio-releases/releases/tag/v1.0.0

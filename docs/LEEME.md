@@ -24,13 +24,13 @@ Cuando hay una versión nueva, el programa te avisa al abrirlo y se actualiza so
   propia imagen o la foto desenfocada, con sombra suave y margen opcionales.
 - **Ampliar**: 2×, 3× o 4×, en modo Foto o Logo / arte. Pensado para imprimir en gran formato.
 - **Restaurar**: la ampliación y restauración de máxima calidad (SeedVR2). Necesita instalar
-  ComfyUI una vez en la misma computadora; mira [SEEDVR2.md](SEEDVR2.md) (en inglés). Todo lo
+  ComfyUI una vez en la misma computadora; mira la [guía de instalación](SEEDVR2-ES.md). Todo lo
   demás funciona sin eso.
 - **Por lotes**: abre varias fotos y activa "Aplicar a todas las imágenes".
 - Comparador antes / después, zoom, deshacer (Ctrl+Z), guardar (Ctrl+S), abrir (Ctrl+O).
 
 La primera vez que usas cada herramienta se descarga un componente (necesitas internet solo en ese
-momento): unos 170 MB para Recortar (930 MB en Máxima) y 65 MB para Ampliar. En Ajustes ves cuánto
+momento): unos 170 MB para Recortar (930 MB en Máxima) y 34 MB para Ampliar. En Ajustes ves cuánto
 ocupa y puedes abrir la carpeta.
 
 ## Exportar para impresión y DTF
