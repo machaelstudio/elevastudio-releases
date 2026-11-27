@@ -19,8 +19,9 @@ computer. Eleva Studio is free, works offline once set up, and never uploads you
   an optional soft shadow and margin.
 - **Enlarge.** 2×, 3× or 4×, for photos or for logos and flat art, using the graphics card when
   one is available.
-- **Restore.** Highest-quality restoration of low-quality images through a local ComfyUI
-  installation. Optional; see the [setup guide](docs/SEEDVR2.md).
+- **Restore.** Highest-quality restoration of low-quality images through ComfyUI, a free
+  program on the same computer. Optional, set up in two steps; see the
+  [setup guide](docs/SEEDVR2.md).
 - **Export for print and DTF.** PNG, JPG and TIFF with a resolution tag, a print-width
   resolution check, and DTF clean-up: solid edges, speck removal, edge shrink, trim and mirror.
 - **Batch work.** Process several images at once and save them together.

@@ -1,90 +1,90 @@
 # Restaurar (máxima calidad) — guía de instalación
 
 La herramienta **Restaurar** amplía y restaura fotos pixeladas o de baja calidad con SeedVR2, un
-modelo de restauración demasiado grande para venir dentro de Eleva Studio (de 3 a 15 GB por
-modelo y una tarjeta gráfica con 8 GB de memoria o más). Por eso Eleva Studio usa una instalación
-de ComfyUI en la misma computadora y la maneja por ti: tú sigues trabajando en Eleva Studio y
-ComfyUI solo tiene que estar abierto.
+modelo de restauración demasiado grande para venir dentro de Eleva Studio (de 3 a 8 GB, y
+necesita una tarjeta gráfica con 8 GB de memoria o más). Por eso Eleva Studio usa ComfyUI, un
+programa gratuito aparte en la misma computadora, y lo maneja por ti: sigues trabajando en Eleva
+Studio y ComfyUI solo tiene que estar abierto de fondo.
 
 Es la única herramienta que necesita instalación. Todo lo demás de Eleva Studio funciona sin
-esto. Si solo quieres ampliar o mejorar una imagen, la herramienta **Ampliar** lo hace al momento.
+instalar nada.
 
 ## Qué necesitas
 
-- **Windows**: una tarjeta gráfica NVIDIA con 8 GB de memoria o más (12 GB o más recomendado) y
+- **Windows**: una tarjeta gráfica NVIDIA con 8 GB de VRAM o más (12 GB o más recomendado) y
   unos 20 GB libres en disco.
-- **Mac**: Apple Silicon con 32 GB de memoria o más. Funciona, pero tarda varios minutos por foto.
+- **Mac**: Apple Silicon con 32 GB o más de memoria unificada. Funciona, pero cada foto tarda
+  varios minutos.
 - Internet para las descargas, que se hacen una sola vez.
 
-## Instalación (unos 15 minutos, una sola vez)
+## Instalación: dos pasos
 
-1. **Instala ComfyUI y ábrelo.** Lo más sencillo es la aplicación oficial de
-   [comfy.org/download](https://www.comfy.org/download) (Windows y Mac). También sirve la versión
-   portable para Windows; mira "Versión portable" más abajo.
-2. **Instala el primer complemento desde ComfyUI.** Abre **Manage Extensions**: el ícono de
-   pieza de rompecabezas en la barra superior, o **Help → Manage Extensions**. Busca `SeedVR2`
-   e instala **ComfyUI-SeedVR2_VideoUpscaler** (de *numz* / AInVFX).
-3. **Agrega el segundo complemento a mano.** *SeedVR2 Tiling Upscaler* (de *moonwhaler*) no
-   está en esa lista, así que no aparece en la búsqueda:
-   1. Descárgalo como zip: [comfyui-seedvr2-tilingupscaler](https://github.com/moonwhaler/comfyui-seedvr2-tilingupscaler/archive/refs/heads/main.zip).
-   2. Descomprímelo dentro de la carpeta `custom_nodes` de ComfyUI. Con la aplicación de
-      escritorio es `Documentos/ComfyUI/custom_nodes`; con la versión portable es
-      `ComfyUI_windows_portable\ComfyUI\custom_nodes`.
-   3. Revisa el resultado: `custom_nodes/comfyui-seedvr2-tilingupscaler-main/` debe contener
-      directamente los archivos del complemento (`__init__.py`, `upscaler.py`, …), no otra
-      carpeta con el mismo nombre.
-   4. Reinicia ComfyUI.
-4. **Deja ComfyUI abierto.** En Eleva Studio abre **Restaurar** y pulsa **Comprobar de nuevo**.
-   Los pasos se marcan uno por uno, así se ve qué parte falta, y después aparece
-   "Listo · conectado a ComfyUI".
+1. **Instala ComfyUI y déjalo abierto.** En Eleva Studio abre **Restaurar** y pulsa
+   **Obtener ComfyUI**; se abre [comfy.org/download](https://www.comfy.org/download). Instala
+   la aplicación de escritorio como cualquier otro programa (Windows y Mac), ábrela y deja que
+   termine su primer arranque. No hay que hacer nada dentro de ComfyUI.
+2. **Pulsa Descargar en Eleva Studio.** De vuelta en **Restaurar**, pulsa **Comprobar de
+   nuevo**: el paso 1 queda marcado y el botón ahora dice **Descargar (3.9 GB)**. Púlsalo.
+   Eleva Studio descarga el componente de Restaurar y lo coloca por sí mismo en la carpeta
+   correcta de ComfyUI. Cuando la barra termina, el panel muestra "Listo · conectado a ComfyUI".
 
-Eleva Studio encuentra ComfyUI por sí solo en las direcciones habituales
-(`http://127.0.0.1:8188`, y `http://127.0.0.1:8000` para la aplicación de escritorio). Solo si
-cambiaste el puerto hay que escribir la dirección en "Dirección de ComfyUI (avanzado)".
+Eso es todo: no hay nada que buscar, descomprimir ni instalar dentro de ComfyUI, y no hace falta
+reiniciarlo.
 
-Las versiones recientes de ComfyUI traen también sus propios flujos de SeedVR2. Son cosa aparte:
-Eleva Studio usa los dos complementos de arriba, porque el de mosaicos es el que permite que los
-tamaños grandes de impresión quepan en la memoria.
+Conviene saber:
 
-### Versión portable: activar Manage Extensions
-
-En la versión portable el gestor de extensiones está apagado hasta que lo actives una vez:
-
-1. Abre la carpeta `ComfyUI_windows_portable`, escribe `cmd` en la barra de direcciones y pulsa
-   Enter.
-2. Ejecuta `.\python_embeded\python.exe -m pip install -r ComfyUI\manager_requirements.txt`
-   (si ese archivo no existe, ejecuta antes `update\update_comfyui.bat`).
-3. Haz una copia de `run_nvidia_gpu.bat`, ábrela con el Bloc de notas y agrega
-   ` --enable-manager` al final de la línea que empieza con `.\python_embeded\python.exe`.
-4. Desde ahora abre ComfyUI con esa copia.
-
-Los modelos **no** se descargan durante la instalación: la primera vez que pulses **Restaurar
-imagen**, ComfyUI descarga el elegido (el progreso se ve en la ventana de ComfyUI). Después ya
-queda en la computadora.
+- La descarga se puede detener con **Detener** y continuar después; sigue donde quedó. Lo mismo
+  ocurre por sí solo si se corta la conexión.
+- Los archivos se comprueban después de la descarga, así que nunca se usa una descarga dañada.
+- Eleva Studio encuentra ComfyUI por sí mismo en las direcciones habituales
+  (`http://127.0.0.1:8000` para la aplicación de escritorio, `http://127.0.0.1:8188` para la
+  versión portable). Solo si cambiaste el puerto tienes que escribir la dirección en "Dirección
+  de ComfyUI (avanzado)".
+- ComfyUI debe ser la versión 0.28 o posterior (julio de 2026). Las anteriores no incluyen
+  SeedVR2; actualiza ComfyUI y pulsa **Comprobar de nuevo**.
 
 ## Cómo usarlo
 
-- **Calidad** muestra los modelos SeedVR2 que conoce ComfyUI:
-  - Modelos *3b*: más rápidos, suficientes para casi todas las fotos. `fp8` necesita unos 8 GB de
-    memoria gráfica; `Q4` GGUF, menos.
-  - Modelos *7b*: el mejor detalle, más lentos, 16 GB de memoria gráfica o más.
-- **Tamaño de salida**: 2×, 3×, 4× o **Impresión**, que calcula los píxeles que necesita tu ancho
-  de impresión a los ppp elegidos (el ancho se pone en Exportar).
-- Pulsa **Restaurar imagen**. Una foto de 1200 px a 4× tarda alrededor de un minuto en una RTX
-  3060. Si ComfyUI se queda sin memoria, Eleva Studio reintenta una vez en un modo de poca
-  memoria, más lento pero que normalmente termina.
-- El resultado es un paso normal: puedes deshacerlo, quitarle el fondo y exportarlo con las
-  opciones de impresión o DTF como cualquier otra imagen.
+- **Calidad**:
+  - *Estándar*: rápida y suficiente para la mayoría de las fotos. Es la que descarga la
+    instalación.
+  - *Alto detalle*: el mayor detalle; más lenta, y pide una tarjeta gráfica con 16 GB o más.
+    Elígela en la lista y el botón pasa a ser **Descargar esta calidad (8.2 GB)**; después es
+    una opción más de la lista.
+- **Tamaño de salida**: 2×, 3×, 4× o **Impresión**, que calcula los píxeles que necesita tu
+  ancho de impresión a los dpi elegidos (el ancho se pone en la tarjeta Exportar).
+- Pulsa **Restaurar imagen**. Los resultados grandes se trabajan por partes, así que el avance
+  va subiendo; una foto de 1200 px a 4× tarda unos minutos en una RTX 3060, más en tarjetas
+  menores. Si ComfyUI se queda sin memoria gráfica, Eleva Studio reintenta una vez en modo de
+  poca memoria (partes más pequeñas), más lento pero normalmente funciona.
+- El resultado es un paso normal del historial: puedes deshacerlo, quitar el fondo, elegir un
+  fondo y exportarlo con las opciones de DTF o impresión como cualquier otra imagen.
 
 ## Problemas
 
-- **"No se encontró ComfyUI en esta computadora"**: abre ComfyUI, espera a que cargue su ventana
-  y pulsa Comprobar de nuevo. Si cambiaste el puerto de ComfyUI, escribe la dirección nueva en
-  "Dirección de ComfyUI (avanzado)".
-- **Dice que falta un complemento que ya instalaste**: reinicia ComfyUI; los complementos solo
-  se cargan al abrirlo. Si sigue faltando *SeedVR2 Tiling Upscaler*, abre su carpeta dentro de
-  `custom_nodes` y revisa que los archivos no hayan quedado una carpeta más adentro (paso 3).
-- **No encuentras el Manager**: ahora se llama **Manage Extensions** (ícono de pieza de
-  rompecabezas o menú Help). En la versión portable hay que activarlo primero, mira arriba.
-- **Sigue sin memoria después del reintento**: elige un modelo `Q4_K_M` GGUF o un tamaño de
-  salida menor.
+- **"No se encontró ComfyUI en esta computadora"**: abre ComfyUI, espera a que cargue su
+  ventana y pulsa **Comprobar de nuevo**. Si cambiaste el puerto de ComfyUI, escribe la nueva
+  dirección en "Dirección de ComfyUI (avanzado)".
+- **"Este ComfyUI es demasiado antiguo para Restaurar"**: actualiza ComfyUI (en la aplicación
+  de escritorio: Help → Check for updates), reinícialo y pulsa **Comprobar de nuevo**.
+- **La descarga se detiene o falla**: pulsa **Descargar** otra vez; continúa donde quedó. Si
+  sigue fallando, revisa el espacio libre en disco.
+- **"El componente ya está en su lugar, pero ComfyUI todavía no lo muestra"**: reinicia ComfyUI
+  y pulsa **Comprobar de nuevo**.
+- **Sigue faltando memoria después del reintento**: usa la calidad *Estándar* o un tamaño de
+  salida menor, y cierra otros programas que usen la tarjeta gráfica.
+
+## Otras instalaciones
+
+- **ComfyUI en otra computadora.** Eleva Studio puede usar un ComfyUI de tu red (escribe su
+  dirección en "Dirección de ComfyUI (avanzado)"), pero no puede descargar dentro de él. Pon tú
+  mismo estos archivos de [Comfy-Org/SeedVR2](https://huggingface.co/Comfy-Org/SeedVR2):
+  `seedvr2_3b_fp8_e4m3fn.safetensors` en `ComfyUI/models/diffusion_models` y
+  `seedvr2_ema_vae_fp16.safetensors` en `ComfyUI/models/vae`.
+- **Ya tienes archivos de SeedVR2.** Cualquier modelo SeedVR2 que esté en
+  `models/diffusion_models` aparece en la lista de Calidad con su propio nombre, siempre que el
+  archivo VAE de arriba esté en `models/vae`.
+- **Instalaciones hechas para una versión anterior de Eleva Studio** (los complementos
+  *ComfyUI-SeedVR2_VideoUpscaler* y *SeedVR2 Tiling Upscaler*) siguen funcionando como antes.
+  Para pasar a la vía integrada, elige *Estándar · descargar* en la lista de Calidad y pulsa el
+  botón; después los complementos dejan de hacer falta.

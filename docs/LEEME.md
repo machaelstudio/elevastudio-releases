@@ -23,11 +23,16 @@ Cuando hay una versión nueva, el programa te avisa al abrirlo y se actualiza so
   **Bordes finos** para pelo y peluche. Luego elige el fondo nuevo: transparente, un color, tu
   propia imagen o la foto desenfocada, con sombra suave y margen opcionales.
 - **Ampliar**: 2×, 3× o 4×, en modo Foto o Logo / arte. Pensado para imprimir en gran formato.
-- **Restaurar**: la ampliación y restauración de máxima calidad (SeedVR2). Necesita instalar
-  ComfyUI una vez en la misma computadora; mira la [guía de instalación](SEEDVR2-ES.md). Todo lo
-  demás funciona sin eso.
+- **Restaurar**: la ampliación y restauración de máxima calidad (SeedVR2). Necesita una
+  instalación de dos pasos, una sola vez: instalar ComfyUI, un programa gratuito, y pulsar
+  Descargar en el panel Restaurar; mira la [guía de instalación](SEEDVR2-ES.md). Todo lo demás
+  funciona sin eso.
 - **Por lotes**: abre varias fotos y activa "Aplicar a todas las imágenes".
-- Comparador antes / después, zoom, deshacer (Ctrl+Z), guardar (Ctrl+S), abrir (Ctrl+O).
+- Comparador antes / después, deshacer (Ctrl+Z), guardar (Ctrl+S), abrir (Ctrl+O).
+- **Zoom y movimiento de la vista previa**: pellizca en el trackpad o gira la rueda del mouse
+  para acercar el punto bajo el cursor, arrastra la imagen (o mueve dos dedos) para recorrerla y
+  haz doble clic para verla al 100% (píxeles reales) y volver. La línea de comparación se mueve
+  con su círculo.
 
 La primera vez que usas cada herramienta se descarga un componente (necesitas internet solo en ese
 momento): unos 170 MB para Recortar (930 MB en Máxima) y 34 MB para Ampliar. En Ajustes ves cuánto

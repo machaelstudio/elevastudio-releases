@@ -4,6 +4,36 @@ All notable changes to Eleva Studio are listed here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [Semantic Versioning](https://semver.org/).
 
+## [1.2.0] - 2026-11-27
+
+### Added
+
+- **Zoom and move the preview.** Pinch on a trackpad or turn the mouse wheel to zoom in on the
+  point under the pointer, and drag the picture, or move two fingers, to look around.
+  Double-click jumps to 100% (actual pixels) and back to Fit, and the zoom readout shows the
+  real percentage. While zoomed in, the before/after line is moved by its round handle. The
+  zoom stays where it is when a step runs on the same picture, so a detail can be compared
+  before and after.
+- **Restore: a second quality.** *High detail* can be added from the Quality list with one
+  more download.
+
+### Changed
+
+- **Restore is set up in two steps.** Install ComfyUI, then press Download in the Restore
+  panel: Eleva Studio fetches the Restore component (3.9 GB) and puts it into ComfyUI by
+  itself. There is no longer anything to search for, unzip or install inside ComfyUI, and
+  ComfyUI does not have to be restarted. The download shows its progress, can be stopped and
+  continued, resumes by itself after a dropped connection, and is checked before it is used.
+- **Restore uses the SeedVR2 that ComfyUI now includes** (ComfyUI 0.28 or newer) instead of two
+  separate add-ons. Large results are worked in overlapping pieces and blended, so print sizes
+  fit in the graphics card's memory, and the progress shows how far along it is.
+- Installs that were set up with the two SeedVR2 add-ons keep working as before.
+
+### Fixed
+
+- **Restore recognises a full graphics card.** ComfyUI's out-of-memory report was not always
+  understood, so the low-memory retry did not start in every case.
+
 ## [1.1.2] - 2026-11-26
 
 ### Fixed
@@ -104,6 +134,7 @@ First release as a native application for Windows and macOS.
 - Batch processing, before/after comparison, undo, and export to PNG, JPG or a ZIP of all images.
 - Signed Windows installer, signed and notarized macOS app, and automatic updates.
 
+[1.2.0]: https://github.com/machaelstudio/elevastudio-releases/releases/tag/v1.2.0
 [1.1.2]: https://github.com/machaelstudio/elevastudio-releases/releases/tag/v1.1.2
 [1.1.1]: https://github.com/machaelstudio/elevastudio-releases/releases/tag/v1.1.1
 [1.1.0]: https://github.com/machaelstudio/elevastudio-releases/releases/tag/v1.1.0

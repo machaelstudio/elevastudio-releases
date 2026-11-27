@@ -22,10 +22,13 @@ When a new version exists the app offers to update itself on launch.
   blurred photo, with an optional soft shadow and margin.
 - **Enlarge**: 2×, 3× or 4×, in Photo or Logo / art mode. Made for large-format printing.
 - **Restore**: the highest-quality enlargement and restoration (SeedVR2). It needs a one-time
-  setup of ComfyUI on the same computer; see [SEEDVR2.md](SEEDVR2.md). Everything else works
-  without it.
+  setup in two steps: install ComfyUI, a free program, then press Download in the Restore panel;
+  see [SEEDVR2.md](SEEDVR2.md). Everything else works without it.
 - **Batch**: open several photos and switch on "Apply to all images".
-- **Before / after** slider, zoom, undo (Ctrl+Z), save (Ctrl+S), open (Ctrl+O).
+- **Before / after** slider, undo (Ctrl+Z), save (Ctrl+S), open (Ctrl+O).
+- **Zoom and move the preview**: pinch on a trackpad or turn the mouse wheel to zoom in on the
+  point under the pointer, drag the picture (or move two fingers) to look around, and double-click
+  for 100% (actual pixels) and back. The comparison line is moved by its round handle.
 
 The first time you use each tool it downloads a component (internet needed only then): about
 170 MB for Cutout (930 MB for Maximum) and 34 MB for Enlarge. Settings shows how much is stored
