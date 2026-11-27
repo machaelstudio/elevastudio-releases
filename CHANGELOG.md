@@ -4,6 +4,29 @@ All notable changes to Eleva Studio are listed here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [Semantic Versioning](https://semver.org/).
 
+## [1.1.2] - 2026-11-26
+
+### Fixed
+
+- **Restore now finds the ComfyUI desktop app.** Eleva Studio only looked for ComfyUI on port
+  8188, the address of the portable build, so an installed and running ComfyUI desktop app
+  (port 8000) was reported as "not found". The app now checks the usual local addresses by
+  itself and remembers the one that answers.
+- **The Quality list in Restore is filled in.** With the current SeedVR2 add-on the list stayed
+  empty, so Restore could not be started even though ComfyUI was connected. The low-memory retry
+  now also reaches the add-on's memory options, which it silently skipped before.
+- **The setup guide matches current ComfyUI.** The Manager is now called Manage Extensions, and
+  the SeedVR2 Tiling Upscaler add-on is not offered there, so the old instructions could not be
+  completed. The guide, in English and Spanish, now explains where to find Manage Extensions,
+  how to add the second add-on by hand, and how to enable the extension manager in the portable
+  build.
+
+### Changed
+
+- **Restore says which part is missing.** The setup steps are ticked off separately for
+  ComfyUI, the SeedVR2 add-on and the tiling add-on, and the message below names the one that
+  is still missing instead of a general "add-ons are missing".
+
 ## [1.1.1] - 2026-11-25
 
 ### Changed
@@ -81,6 +104,7 @@ First release as a native application for Windows and macOS.
 - Batch processing, before/after comparison, undo, and export to PNG, JPG or a ZIP of all images.
 - Signed Windows installer, signed and notarized macOS app, and automatic updates.
 
+[1.1.2]: https://github.com/machaelstudio/elevastudio-releases/releases/tag/v1.1.2
 [1.1.1]: https://github.com/machaelstudio/elevastudio-releases/releases/tag/v1.1.1
 [1.1.0]: https://github.com/machaelstudio/elevastudio-releases/releases/tag/v1.1.0
 [1.0.0]: https://github.com/machaelstudio/elevastudio-releases/releases/tag/v1.0.0

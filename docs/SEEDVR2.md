@@ -19,18 +19,45 @@ This is the one tool that needs a setup. Everything else in Eleva Studio works o
 
 ## Install (about 15 minutes, once)
 
-1. **Install ComfyUI.** The simplest route is the official desktop app from
+1. **Install ComfyUI and open it.** The simplest route is the official desktop app from
    [comfy.org/download](https://www.comfy.org/download) (Windows and Mac). The portable Windows
    zip from the [ComfyUI GitHub releases](https://github.com/comfyanonymous/ComfyUI/releases) also
-   works.
-2. **Open ComfyUI** and open the **Manager** (the puzzle-piece button; the desktop app ships
-   with it). Choose **Custom Nodes Manager**, search and install:
-   - **ComfyUI-SeedVR2_VideoUpscaler** by *numz* (select the **nightly** version when asked).
-   - **SeedVR2 Tiling Upscaler** by *moonwhaler* (`comfyui-seedvr2-tilingupscaler`).
-   Restart ComfyUI when the Manager asks.
-3. **Leave ComfyUI open.** By default it listens on `http://127.0.0.1:8188`.
-4. In Eleva Studio open **Restore** and press **Check again**. The steps are ticked off and
-   the panel shows "Ready · connected to ComfyUI".
+   works; see "Portable build" below.
+2. **Install the first add-on from inside ComfyUI.** Open **Manage Extensions**: the
+   puzzle-piece icon in the top bar, or **Help → Manage Extensions**. Search for `SeedVR2` and
+   install **ComfyUI-SeedVR2_VideoUpscaler** (by *numz* / AInVFX).
+3. **Add the second add-on by hand.** *SeedVR2 Tiling Upscaler* (by *moonwhaler*) is not in
+   that list, so it will not show up in the search:
+   1. Download it as a zip: [comfyui-seedvr2-tilingupscaler](https://github.com/moonwhaler/comfyui-seedvr2-tilingupscaler/archive/refs/heads/main.zip).
+   2. Unzip it into ComfyUI's `custom_nodes` folder. With the desktop app that is
+      `Documents/ComfyUI/custom_nodes`; with the portable build it is
+      `ComfyUI_windows_portable\ComfyUI\custom_nodes`.
+   3. Check the result: `custom_nodes/comfyui-seedvr2-tilingupscaler-main/` must contain the
+      add-on's files (`__init__.py`, `upscaler.py`, …) directly, not another folder of the same
+      name.
+   4. Restart ComfyUI.
+4. **Leave ComfyUI open.** In Eleva Studio open **Restore** and press **Check again**. The
+   steps are ticked off one by one, so you can see which part is still missing, and the panel
+   then shows "Ready · connected to ComfyUI".
+
+Eleva Studio finds ComfyUI by itself on the usual addresses (`http://127.0.0.1:8188`, and
+`http://127.0.0.1:8000` for the desktop app). Only if you changed the port do you need to type
+the address under "ComfyUI address (advanced)".
+
+Recent versions of ComfyUI also ship their own SeedVR2 workflows. Those are separate: Eleva
+Studio uses the two add-ons above, because the tiling add-on is what makes large print sizes fit
+in memory.
+
+### Portable build: turning on Manage Extensions
+
+In the portable build the extension manager is switched off until you enable it once:
+
+1. Open the `ComfyUI_windows_portable` folder, type `cmd` in the address bar and press Enter.
+2. Run `.\python_embeded\python.exe -m pip install -r ComfyUI\manager_requirements.txt`
+   (if that file does not exist, run `update\update_comfyui.bat` first).
+3. Make a copy of `run_nvidia_gpu.bat`, open the copy in Notepad and add ` --enable-manager` to
+   the end of the line that starts with `.\python_embeded\python.exe`.
+4. Start ComfyUI with that copy from now on.
 
 The models are **not** downloaded during the install: the first time you press **Restore image**
 ComfyUI downloads the chosen one (the progress is shown in ComfyUI's own window). After that it
@@ -58,7 +85,11 @@ uses 512 px tiles, 16 swapped blocks and tiled VAE.
 - **"ComfyUI was not found on this computer"**: start ComfyUI, wait until its window has
   loaded, press Check again. If you changed ComfyUI's port, type the new address under
   "ComfyUI address (advanced)".
-- **"the two SeedVR2 add-ons are missing"**: finish step 2 and restart ComfyUI.
+- **An add-on is reported missing after you installed it**: restart ComfyUI; add-ons are only
+  loaded at start. If *SeedVR2 Tiling Upscaler* is still missing, open its folder in
+  `custom_nodes` and make sure the files are not one folder too deep (step 3).
+- **You cannot find the Manager**: it is now called **Manage Extensions** (puzzle-piece icon or
+  the Help menu). In the portable build it has to be enabled first, see above.
 - **Still out of memory after the retry**: pick a `Q4_K_M` GGUF model, or a smaller output size.
 - **ComfyUI shows an error about a missing model**: open ComfyUI's window; the first download
   may have been interrupted. Press Restore again to resume it.
