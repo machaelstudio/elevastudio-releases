@@ -27,6 +27,12 @@ Cuando hay una versión nueva, el programa te avisa al abrirlo y se actualiza so
   instalación de dos pasos, una sola vez: instalar ComfyUI, un programa gratuito, y pulsar
   Descargar en el panel Restaurar; mira la [guía de instalación](SEEDVR2-ES.md). Todo lo demás
   funciona sin eso.
+- **Vectorizar**: convierte un logo, letras o una ilustración de colores planos en formas que se
+  mantienen nítidas a cualquier tamaño y las guarda como SVG, que abre en CorelDRAW,
+  Illustrator, Inkscape y programas de corte. Elige **Color** (pocos, algunos o muchos colores) o
+  **Un color** (las partes oscuras como formas negras) y cuánto detalle conservar. Para un fondo
+  transparente usa Recortar primero; para un logo pequeño o pixelado usa antes Ampliar (Logo /
+  arte). Con un ancho de impresión puesto en Exportar, el SVG abre a ese tamaño.
 - **Por lotes**: abre varias fotos y activa "Aplicar a todas las imágenes".
 - Comparador antes / después, deshacer (Ctrl+Z), guardar (Ctrl+S), abrir (Ctrl+O).
 - **Zoom y movimiento de la vista previa**: pellizca en el trackpad o gira la rueda del mouse

@@ -4,6 +4,22 @@ All notable changes to Eleva Studio are listed here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [Semantic Versioning](https://semver.org/).
 
+## [1.3.0] - 2026-11-27
+
+### Added
+
+- **Vectorize.** A new tool after Restore turns a logo, lettering or flat artwork into shapes
+  that stay sharp at any size and saves them as SVG, which opens in CorelDRAW, Illustrator,
+  Inkscape and cutting software.
+  - **Color** reduces the picture to its real colors first (few, some or many), so a
+    five-color logo comes out with five colors and clean edges instead of dozens of in-between
+    rims. **One color** keeps the dark parts as black shapes, for single-color cutting.
+  - **Detail** sets how small a detail is kept and how closely the outlines follow the picture.
+  - A transparent background (after Cutout) stays empty in the drawing.
+  - The result is a normal step: it can be undone, zoomed into (the preview shows the drawing
+    itself), and still exported as PNG, JPG or TIFF. With a print width set in Export, the SVG
+    opens at that size. With "Apply to all images" on, all drawings are saved together as a ZIP.
+
 ## [1.2.0] - 2026-11-27
 
 ### Added
@@ -134,6 +150,7 @@ First release as a native application for Windows and macOS.
 - Batch processing, before/after comparison, undo, and export to PNG, JPG or a ZIP of all images.
 - Signed Windows installer, signed and notarized macOS app, and automatic updates.
 
+[1.3.0]: https://github.com/machaelstudio/elevastudio-releases/releases/tag/v1.3.0
 [1.2.0]: https://github.com/machaelstudio/elevastudio-releases/releases/tag/v1.2.0
 [1.1.2]: https://github.com/machaelstudio/elevastudio-releases/releases/tag/v1.1.2
 [1.1.1]: https://github.com/machaelstudio/elevastudio-releases/releases/tag/v1.1.1

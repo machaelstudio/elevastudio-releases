@@ -19,6 +19,8 @@ computer. Eleva Studio is free, works offline once set up, and never uploads you
   an optional soft shadow and margin.
 - **Enlarge.** 2×, 3× or 4×, for photos or for logos and flat art, using the graphics card when
   one is available.
+- **Vectorize.** Traces logos, lettering and flat artwork into clean SVG shapes for CorelDRAW,
+  Illustrator and cutting software.
 - **Restore.** Highest-quality restoration of low-quality images through ComfyUI, a free
   program on the same computer. Optional, set up in two steps; see the
   [setup guide](docs/SEEDVR2.md).

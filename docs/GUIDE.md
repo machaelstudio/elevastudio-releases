@@ -24,6 +24,12 @@ When a new version exists the app offers to update itself on launch.
 - **Restore**: the highest-quality enlargement and restoration (SeedVR2). It needs a one-time
   setup in two steps: install ComfyUI, a free program, then press Download in the Restore panel;
   see [SEEDVR2.md](SEEDVR2.md). Everything else works without it.
+- **Vectorize**: turns a logo, lettering or flat artwork into shapes that stay sharp at any size
+  and saves them as SVG, which opens in CorelDRAW, Illustrator, Inkscape and cutting software.
+  Choose **Color** (few, some or many colors) or **One color** (the dark parts as black shapes),
+  and how much detail to keep. For a transparent background use Cutout first; for a small or
+  pixelated logo use Enlarge (Logo / art) first. With a print width set in Export, the SVG opens
+  at that size.
 - **Batch**: open several photos and switch on "Apply to all images".
 - **Before / after** slider, undo (Ctrl+Z), save (Ctrl+S), open (Ctrl+O).
 - **Zoom and move the preview**: pinch on a trackpad or turn the mouse wheel to zoom in on the
